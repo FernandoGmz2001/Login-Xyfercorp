@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/resources/css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Login</title>
+  </head>
+  <body>
+    <main class="main">
+      <nav class="navbar">
+        <div class="navbar_logo">
+          <a href="/" class="logo">XyferCorp</a>
+        </div>
+        <div class="navbar_session">
+          <a href="">Login</a>
+          <button class="btnSignUp"><a href="register">Sign Up</a></button>
+        </div>
+      </nav>
+      <header class="header">
+        <div class="login-container">
+          <div class="info-container">
+            <div class="login-header">
+              <h1 class="login-title">Login</h1>
+            </div>
+            <div class="login-forms">
+              <form class="forms" action="/auth" method="POST">
+                <input
+                  type="text"
+                  name="user"
+                  id="user"
+                  placeholder="User"
+                  class="input"
+                />
+                <input
+                  type="password"
+                  name="pass"
+                  id="pass"
+                  placeholder="Password"
+                  class="input"
+                />
+                <div class="container-btnLogin">
+                  <input type="submit" class="btnLogin" value="Login" />
+                </div>
+              </form>
+            </div>
+            <div class="container-notRegistered">
+              <p class="notRegistered">
+                Not registered yet? <a href="register">Create an Account</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </header>
+    </main>
+  </body>
+
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+  <% if(typeof alert != "undefined") { %>
+  <script>
+    Swal.fire({
+      title:'<%= alertTitle %>',
+      text:'<%= alertMessage %>',
+      icon:'<%= alertIcon %>',
+      showConfirmButton:<%= showConfirmButton %>,
+      timer:<%= timer %>
+    }).then(()=>{
+      window.location='/<%= ruta %>'
+    })
+  </script>
+  <% } %>
+</html>

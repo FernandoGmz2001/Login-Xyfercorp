@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/resources/css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Register</title>
+  </head>
+  <body>
+    <main class="main">
+      <nav class="navbar">
+        <div class="navbar_logo">
+          <a href="/" class="logo">XyferCorp</a>
+        </div>
+        <div class="navbar_session">
+          <a href="login">Login</a>
+          <button class="btnSignUp"><a href="register">Sign Up</a></button>
+        </div>
+      </nav>
+      <header class="header">
+        <div class="register-container">
+          <div class="info-container">
+            <div class="login-header">
+              <h1 class="login-title">Sign Up</h1>
+            </div>
+            <div class="login-forms">
+              <form class="forms" action="/register" method="POST">
+                <label for="user" class="userLabel">User</label>
+                <input
+                  type="text"
+                  name="user"
+                  id="user"
+                  placeholder="User"
+                  required
+                  class="input"
+                />
+                <label for="name" class="userLabel">Full Name</label>
+                <input
+                  type="text"
+                  name="name"
+                  id="user"
+                  placeholder="Full Name"
+                  required
+                  class="input"
+                />
+                <label for="rol" class="userLabel">Rol</label>
+                <select name="rol" id="rol" class="select-rol">
+                  <option value="admin" selected class="option">Admin</option>
+                  <option value="data entry" selected class="option">
+                    Data Entry
+                  </option>
+                </select>
+                <label for="password" class="userLabel">Password</label>
+                <input
+                  type="password"
+                  name="pass"
+                  id="pass"
+                  placeholder="Password"
+                  required
+                  class="input"
+                />
+                <div class="container-btnLogin">
+                  <input type="submit" class="btnLogin" value="Sign Up" />
+                </div>
+              </form>
+            </div>
+            <div class="container-notRegistered">
+              <p class="notRegistered">
+                Already have an Account? <a href="login">Login</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </header>
+    </main>
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+    <% if(typeof alert != "undefined") { %>
+    <script>
+      Swal.fire({
+        title:'<%= alertTitle %>',
+        text:'<%= alertMessage %>',
+        icon:'<%= alertIcon %>',
+        showConfirmButton:<%= showConfirmButton %>,
+        timer:<%= timer %>
+      }).then(()=>{
+        window.location='/<%= ruta %>'
+      })
+    </script>
+    <% } %>
+  </body>
+</html>

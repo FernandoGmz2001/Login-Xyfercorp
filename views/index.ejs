@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/resources/css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Main page</title>
+  </head>
+  <body>
+    <main class="main">
+      <nav class="navbar">
+        <div class="navbar_logo">
+          <a href="/" class="logo">XyferCorp</a>
+        </div>
+        <div class="navbar_session">
+          <a href="login">Login</a>
+          <% if (login) { %>
+          <button class="btnLogout"><a href="logout">Logout</a></button>
+          <% } else{ %>
+          <button class="btnSignUp"><a href="login">Sign up</a></button>
+          <% } %>
+        </div>
+      </nav>
+      <header class="header">
+        <% if (login) { %>
+          <h1>El usuario conectado es : <%= name %></h1>
+          <% } else{ %>
+          <h1><%= name %></h1>
+          <% } %>
+      </header>
+
+    </main>
+  </body>
+
+
+</html>

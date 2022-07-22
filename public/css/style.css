@@ -1,0 +1,214 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #fdfdfd;
+}
+
+:root {
+  --main-blue: #1557ff;
+}
+
+.navbar {
+  height: 6vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  padding: 0px 5%;
+  background-color: var(--main-blue);
+}
+
+.logo {
+  font-size: 1rem;
+  color:white;
+  text-decoration:none;
+  font-weight: bold;
+}
+
+.navbar_session {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.navbar_session a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.8rem;
+}
+
+.btnSignUp {
+  padding: 5px 15px;
+  background-color: white;
+  border: none;
+  border-radius: 40px;
+}
+
+.btnSignUp a {
+  font-weight: bold;
+  color: var(--main-blue);
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 94vh;
+}
+
+.info-container {
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 240px;
+}
+
+.login-container {
+  background-color: white;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  width: 300px;
+  border-radius: 10px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+
+  /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+}
+
+.register-container {
+    background-color: white;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    width: 300px;
+    border-radius: 10px;
+    height: 430px;
+    display: flex;
+    justify-content: center;
+  
+    /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+  }
+
+.login-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.login-title {
+  font-size: 1.3rem;
+}
+
+.forms {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.input {
+  padding: 5px 10px;
+  border: 1px solid rgb(230, 227, 227);
+  border-radius: 40px;
+  transition: 0.1s ease;
+}
+
+.select-rol{
+    padding: 5px 10px;
+    border: 1px solid rgb(230, 227, 227);
+}
+
+.select-rol:focus{
+    border: 1px solid rgb(230, 227, 227);
+    outline: 1px solid rgb(230, 227, 227);
+}
+
+.option:current{
+    color: gray;
+}
+
+.userLabel {
+  font-size: 0.8rem;
+}
+
+.input::placeholder {
+  color: rgb(163, 162, 162);
+  font-size: 0.8rem;
+}
+
+.input:focus {
+  outline: none;
+  transition: 0.1s ease;
+}
+
+.container-btnLogin {
+  width: 100%;
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+}
+
+.btnCancel {
+  background-color: rgb(255, 85, 85);
+  color: white;
+  border: none;
+  padding: 5px 15px;
+}
+
+.btnCancel:hover {
+  cursor: pointer;
+}
+
+.btnLogin {
+  width: 90%;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 40px;
+  background-color: #1557ff;
+  color: white;
+}
+
+.btnLogout{
+  width: 90%;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 40px;
+  background-color: rgb(248, 81, 81);
+}
+
+.btnLogout a{
+  color:white;
+  font-weight: bold;
+}
+
+
+.square {
+  border-radius: 0px;
+}
+
+.btnLogin:hover {
+  cursor: pointer;
+}
+
+.notRegistered {
+  margin-top: 10px;
+  font-size: 0.8rem;
+}
+
+.container-notRegistered{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-notRegistered a {
+  color: var(--main-blue);
+  text-decoration: none;
+}
